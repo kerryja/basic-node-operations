@@ -1,0 +1,101 @@
+1. Sort - this sorts each line of the file in alphabetical order and also groups them by indentation. The lines with the most indentation are alphabetically sorted first all the way down to the lines with no indentation at all.
+   
+$ sort commands.js
+            break;
+            break;
+            commandLibrary.cat(userInputArray.slice(1));
+            commandLibrary.echo(userInputArray.slice(1).join(" "));
+            done(data);
+            if (err) throw err;
+        });
+        case "cat":
+        case "echo":
+        const fileName = fullPath[0];
+        done(userInput);
+        fs.readFile(fileName, (err, data) => {
+    "cat": function(fullPath) {
+    "echo": function (userInput) {
+    }
+    }
+    },
+    const command = userInputArray[0];
+    const userInputArray = userInput.split(" ");
+    process.stdout.write('\nprompt > ');
+    process.stdout.write(output);
+    switch (command) {
+
+
+}
+}
+};
+const commandLibrary = {
+const fs = require("fs");
+function done(output) {
+function evaluateCmd(userInput) {
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+
+WC - this command prints the number of bytes, words and lines in a file.
+
+$ wc commands.js
+ 35  74 899 commands.js
+
+Uniq - this command sorts through each line in a file and only returns the lines that are not duplicates.
+
+$ uniq commands.js
+const fs = require("fs");
+
+function done(output) {
+    process.stdout.write(output);
+    process.stdout.write('\nprompt > ');
+}
+
+function evaluateCmd(userInput) {
+    const userInputArray = userInput.split(" ");
+    const command = userInputArray[0];
+
+    switch (command) {
+        case "echo":
+            commandLibrary.echo(userInputArray.slice(1).join(" "));
+            break;
+        case "cat":
+            commandLibrary.cat(userInputArray.slice(1));
+            break;
+    }
+}
+
+const commandLibrary = {
+    "echo": function (userInput) {
+        done(userInput);
+    },
+    "cat": function(fullPath) {
+        const fileName = fullPath[0];
+        fs.readFile(fileName, (err, data) => {
+            if (err) throw err;
+            done(data);
+        });
+    }
+};
+
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+2. uniq commands.js | wc | timeout --kill-after=1
+
+Sorts through each line of the file and only prints out the lines that are not duplicates. It will then print out the number of bytes, words and files in the file and will timeout after 1 second.
+
+
+6. 
+
+function reverseString(inputString) {
+	var newArray = [];
+	let words = inputString.split(' ');
+  	words.forEach((word) => {
+		let reversedWords = word.split('').reverse().join('');
+		newArray.push(reversedWords);
+	})
+	return newArray.join(' ');
+}
+
+reverseString('i love coffee');
